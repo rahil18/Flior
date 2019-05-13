@@ -1,0 +1,46 @@
+<% include partials/header  %>
+
+<div class="container">
+  <header class="jumbotron" style="margin-top:20px; padding: 10px;">
+    <div class="container">
+       <h1> Welcome to the events page!</h1>
+       <p>Create, explore and indulge in various events at Stevens!</p>
+       <p>
+        <a class= "btn btn-primary btn-lg" href="/events/new">Create a new Event</a>
+      </p>
+    </div>
+  </header>
+  
+  <div class = "container">
+    <form action="/search" method="POST">
+      <div class="section1">
+        <div>
+          <h3 style="display:inline; color: aliceblue; font-weight: 300;">Search for an Event:</h3> <input style="display:inline; margin:10px; width:400px " type="text" id="event_name" name="event_name"> <input type="submit" value="Search" class="btn btn-primary" style="height:30px">
+          <br />
+        </div>
+      </form>
+  </div>
+  <br />
+  <br />
+
+  <div class="row text-center">
+        <% events.forEach(function(i){ %>
+        <div class="col-md-3 col-sm-6">                                              <!--Double cols to make the site responsive and mobile compatible-->
+          <div class="thumbnail">
+            <img src=" <%= i.image %>">
+            <div class="caption">
+              <h4> <%= i.name%> </h4> 
+            </div>
+            <p>
+              <a href="/events/<%= i._id %>" class="btn btn-primary">More Info</a>
+            </p>
+          </div>
+        </div>
+        <% });%>
+  </div>
+
+
+</div>
+
+
+<% include partials/footer  %>

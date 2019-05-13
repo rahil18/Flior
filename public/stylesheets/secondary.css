@@ -1,0 +1,200 @@
+hr
+{
+  border: 1px solid white;
+  z-index: 100;
+}
+
+body
+{
+  background: #232323;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  margin-bottom: 34%;
+}
+
+#title_header{
+  background: #232323
+}
+
+html
+{
+  height: 100%;
+}
+
+#content
+{
+  padding-top: 12%;
+  text-align: center;
+  font-family: 'Avenir Next';
+  font-weight: 700;
+  color: white;
+  z-index: 100;
+  position: relative;
+}
+
+#navProp
+{
+  color: #31BEF8;
+  z-index: 100;
+  position: relative;
+}
+
+
+#topmost
+{
+  background-blend-mode:lighten;
+  color: #31BEF8;
+  z-index: 100;
+  position: relative;
+}
+
+
+#Footer
+{
+  color: grey;
+  padding-bottom: 5%;
+  z-index: 100;
+  position: relative;
+}
+
+#end
+{
+  /* background: #061626; */
+  background: #232323;
+  z-index: 100;
+  position: relative;
+}
+
+#endtext
+{
+  color: grey;
+  font-weight: 100;
+  padding-top: 3%;
+  z-index: 100;
+  position: relative;
+}
+
+
+#about
+{
+  background: white;
+  padding-top: 5%;
+  z-index: 100;
+  position: relative;
+}
+
+#page2
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 5%;
+  z-index: 100;
+  position: relative;
+}
+
+#p2h1
+{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Avenir Next';
+  font-weight: 100;
+  z-index: 100;
+  position: relative;
+}
+
+#eventDetails
+{
+  font-weight: 100;
+  z-index: 100;
+  position: relative;
+}
+
+#eventCount
+{
+  text-align: center;
+  padding-top: 5%;
+  z-index: 100;
+  position: relative;
+}
+
+#eventTimeline
+{
+  color: #31BEF8;
+  z-index: 100;
+  position: relative;
+}
+
+
+#tagline
+{
+   font-weight: 400;
+   color: #31BEF8; 
+}
+
+#name
+{
+    /*color: #31BEF8;*/
+    color: #fff;
+    font-weight: 400;
+}
+
+h1
+{
+  font-size: 5em;
+  z-index: 100;
+  position: relative;
+}
+
+h2
+{
+  font-family: 'Avenir Next';
+  font-weight: 100;
+  color: white;
+  z-index: 100;
+  position: relative;
+}
+
+h3
+{
+  font-weight: 300;
+  z-index: 100;
+  position: relative;
+  
+}
+
+h4
+{
+  font-weight: 100;
+  z-index: 100;
+  position: relative;
+}
+
+h5
+{
+  font-family: 'Avenir Next';
+  font-weight: 500;
+  padding-top: 4%;
+  z-index: 100;
+  position: relative;
+}
+
+h6
+{
+  font-weight: 300;
+  z-index: 100;
+  position: relative;
+}
+hr
+{
+  width: 400px;
+  border: 1px solid #f8f8f8;
+  z-index: 100;
+  position: relative;
+}

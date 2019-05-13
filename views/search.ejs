@@ -1,0 +1,39 @@
+<% include partials/header  %>
+
+<div class="container">
+    <header class="jumbotron" style="padding-left: 0px; padding-top: 5px; padding-bottom: 5px;">
+       <h2>Search Results for "<%= search_event %>":</h2>
+    </header>
+   <!-- <% console.log(search_event)%> -->
+   <div class="row text-center">
+      <% var filteredEvents = events.filter(event => event.name.includes(search_event));%>
+
+      <% if (filteredEvents.length) { %>
+     
+        <% events.forEach(function(i){ %>
+          
+          <% if(i.name.includes(search_event)) { %>
+
+         <div class="col-md-3 col-sm-6">                                              <!--Double cols to make the site responsive and mobile compatible-->
+          <div class="thumbnail">
+            <img src=" <%= i.image %>">
+            <div class="caption">
+              <h4> <%= i.name%> </h4> 
+            </div>
+            <p>
+              <a href="/events/<%= i._id %>" class="btn btn-primary">More Info</a>
+            </p>
+          </div>
+        </div>
+
+        <% } %>
+       <% });%>
+       <% } else  { %>
+
+        <h4 style="color: aliceblue;"> No results found...</h4>
+          <% } %>
+          
+    </div>
+    <a href="/events" class="btn btn-danger">Back!</a>
+</div>
+<% include partials/footer  %>

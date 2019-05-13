@@ -1,0 +1,57 @@
+<% include partials/header  %>
+
+<div class="container">
+    
+    <div class=row>
+        <div class="col-md-3">
+            <p class="lead" style="color:aliceblue;"> Flior </p>
+            <div class="list-group">
+                <li class="list-group-item list-group-item-info"> <h4>Event Information</h4></li>
+                <li class="list-group-item list-group-item-warning"><h4> <%= event.name %> </h4>
+                    <p><%= event.description %></p>
+                    <p>
+                      <em>Submitted by: <%= event.author.username %>, <%= moment(event.createdAt).fromNow() %></em>
+                    </p>
+                </li>
+            </div>
+            <a href="/events" class="btn btn-danger">Back!</a>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= event.image %>">
+                <div class="caption-full">
+                    <% if(currentUser && event.author.id.equals(currentUser._id)){ %>
+                    <form id="delete-form" action="/events/<%= event._id %>?_method=DELETE" method="POST"> <!--Form for deleting the event -->
+                            <button class="btn btn-xs btn-danger">Delete</button>
+                    </form>
+                    <% }%>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-primary" href="/events/<%= event._id %>/comments/new">Add a new Comment</a>
+                </div>
+                <hr>
+                <% event.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong> <%= comment.author.username %> </strong>
+                            <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
+                            <p>
+                                <%= comment.text %>
+                            </p>
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                            <form id="delete-form" action="/events/<%=event._id %>/comments/<%=comment._id %>?_method=DELETE" method="POST">
+                                <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                            </form>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer  %>
+

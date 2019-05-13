@@ -1,7 +1,6 @@
 # Flior
 
-This is a repository for the Flior Project. Flior is an event management platform where Stevens students can log in, create and view events
-around them. It's a one stop solution for anything that is happening on the campus!
+This is a repository for the Final Project for CS546. Flior is an event management platform where Stevens students can log in, create and view events around them. It's a one stop solution for anything that is happening on the campus!
 
 Core Features: 
 >Event Creation: Users can create an event by providing event title, description and an image. Once an event is created, it will be visible to everyone that visits the website

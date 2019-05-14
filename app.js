@@ -13,11 +13,9 @@ var express = require("express"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
     event = require("./models/event"),
-    //seedDB = require("./seeds"),
     Comment = require("./models/comment"), 
     NodeGeocoder = require('node-geocoder'),
     User = require("./models/user");
-    seedDB = require("./seeds")
     xss = require("xss");
    
    
@@ -28,7 +26,6 @@ app.use(express.static(__dirname + "/public"));                                 
 app.use(methodOverride("_method"));
 app.use(flash());                                                               //To enable flash messages
 app.locals.moment = require('moment');
-seedDB();
 
 
 // PASSPORT CONFIGURATION

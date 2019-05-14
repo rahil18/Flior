@@ -11,3 +11,7 @@
 body{
     background: #232323;
 }
+
+label.input{
+    color:#ffff
+  }

@@ -30,5 +30,14 @@ Anomalous cases:
 
 >Success messages are displayed when a user signs-ups on the platform
 
+Execution Instructions: 
+
+>Start the mongo server on a terminal using mongod 
+
+>Run npm install on another terminal 
+
+>Run npm start on the same terminal 
+
+>The website should be up and running. Rest is same as displayed in the video (https://www.youtube.com/watch?v=Skufiv_o7zQ&t=11s)
 
  

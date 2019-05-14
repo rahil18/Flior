@@ -22,6 +22,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.0",
-    "xss": "^1.0.6"
+    "xss": "^1.0.6",
+    "@khanacademy/tota11y": "^0.2.0"
   }
 }

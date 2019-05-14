@@ -17,6 +17,7 @@ var express = require("express"),
     Comment = require("./models/comment"), 
     NodeGeocoder = require('node-geocoder'),
     User = require("./models/user");
+    seedDB = require("./seeds")
     xss = require("xss");
    
    
@@ -27,6 +28,7 @@ app.use(express.static(__dirname + "/public"));                                 
 app.use(methodOverride("_method"));
 app.use(flash());                                                               //To enable flash messages
 app.locals.moment = require('moment');
+seedDB();
 
 
 // PASSPORT CONFIGURATION
@@ -144,7 +146,7 @@ app.delete("/events/:id", checkeventOwnership, function(req, res){
 
 app.post("/search", function(req, res)
 {
-    var e_name = xss(req.body.event_name);
+    var e_name = req.body.event_name;
     //    console.log(e_name);
 
        event.find({}, function(err, allevents)

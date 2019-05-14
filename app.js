@@ -188,7 +188,7 @@ app.post("/events/:id/comments", isLoggedIn, function(req, res) {
         }
         else
         {
-            Comment.create(xss(req.body.comment), function(err, comment) //Creating a comment after finding the event
+            Comment.create(req.body.comment, function(err, comment) //Creating a comment after finding the event
              {
                  if(err)
                  {

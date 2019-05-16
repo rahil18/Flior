@@ -6,13 +6,14 @@
     </header>
    <!-- <% console.log(search_event)%> -->
    <div class="row text-center">
-      <% var filteredEvents = events.filter(event => event.name.includes(search_event));%>
+      <% var filteredEvents = events.filter(event => event.name.toLowerCase().includes(search_event.toLowerCase()));%>
 
       <% if (filteredEvents.length) { %>
      
         <% events.forEach(function(i){ %>
           
-          <% if(i.name.includes(search_event)) { %>
+          <% if( i.name.toLowerCase().includes(search_event.toLowerCase())) { %>
+
 
          <div class="col-md-3 col-sm-6">                                              <!--Double cols to make the site responsive and mobile compatible-->
           <div class="thumbnail">
